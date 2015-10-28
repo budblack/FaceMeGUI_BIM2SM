@@ -123,8 +123,10 @@ namespace FaceMeGUI
                             Console.WriteLine(string.Format(" {0},{1},{2}", p3d.X, p3d.Y, p3d.Z));
                             scene.TrackingLayer.Add(new GeoPoint3D(p3d.X, p3d.Y, p3d.Z), "");
                         }
-                        model.Meshes.Add(MakeMeshPot(p3ds));
-
+                        //model.Meshes.Add(MakeMeshPot(p3ds));
+                        Mesh mesh = new Mesh(m);
+                        mesh.Material.TextureFile = @".\78310a55b319ebc41f7810198326cffc1e171629.png";
+                        model.Meshes.Add(mesh);
 
 
                         #region 写属性表
